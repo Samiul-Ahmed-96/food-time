@@ -1,5 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* Header */
+.header {
+    background: #F0F4EC;
+    border-bottom: 1px solid #C4C4C4;
+    padding: 10px 0px;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 200%;
+    color: #3F3F3F;
+    margin-right: 30px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(24 24 23) !important;
+}
+
+.brand-logo {
+    position: relative;
+}
+
+.brand-logo img {
+    position: absolute;
+    height: 17px;
+    right: 5px;
+}
+
+.brand-logo a {
+    font-family: 'Merienda';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28.3446px;
+    line-height: 160%;
+    color: #396C03 !important;
+}
+
+.btn-outline-dark {
+    border-radius: 0;
+}
+
+.btn-outline-dark:focus {
+    box-shadow: none;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    right: -5px;
+    top: -8px;
+    background: #ff8b00;
+    height: 26px;
+    width: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-family: 'Poppins';
+}
+
+.cart button {
+    width: 60px;
+    height: 60px;
+    background: #396C03;
+    border-radius: 50%;
+    border: none;
+}
+
+.login-btn {
+    padding: 12px 50px;
+    border-radius: 30px;
+    margin-right: 10px;
+    background: #396c03;
+    border: none;
+    color: #fff;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 170%;
+}
+
+
+/* Header */
 /* Banner */
 .banner {
     background: #F0F4EC;
@@ -14,9 +105,11 @@
     line-height: 130%;
     color: #396C03;
 }
-.banner-left{
+
+.banner-left {
     position: relative;
 }
+
 .banner-left-leaf {
     position: absolute;
     top: -280px;
@@ -54,7 +147,8 @@ form.search-bar input {
     opacity: 0.3;
     border: 2px solid #396C03;
     border-radius: 120px;
-    height: 69px;padding: 0px 80px;
+    height: 69px;
+    padding: 0px 80px;
 }
 
 form.search-bar input::placeholder {
@@ -65,6 +159,7 @@ form.search-bar input::placeholder {
     line-height: 170%;
     color: #C7C7C7;
 }
+
 .blank-area {
     height: 49px;
     width: 49px;
@@ -74,11 +169,13 @@ form.search-bar input::placeholder {
     top: 10px;
     border-radius: 50%;
 }
+
 .search-bar button {
     font-family: 'Poppins';
     position: absolute;
     right: 0;
-    top: 0px;height: 69px;
+    top: 0px;
+    height: 69px;
     border-radius: 50px;
     background: #396c03;
     color: #fff;
@@ -154,9 +251,10 @@ form.search-bar input::placeholder {
     transform: rotate(5deg);
     top: -100px;
 }
+
 /* Banner */
 
-.about{
+.about {
     padding: 60px 0px;
 }
 
@@ -171,6 +269,7 @@ form.search-bar input::placeholder {
 .cycle {
     position: absolute;
     top: 0;
+    animation: myAnim 1s ease-out 0s infinite alternate both;
 }
 
 .about-left h2 {
@@ -189,12 +288,48 @@ form.search-bar input::placeholder {
     font-size: 18px;
     line-height: 160%;
 }
+
 .about-left button {
     font-family: 'Poppins';
+
     height: 69px;
     border-radius: 50px;
     background: #396c03;
     color: #fff;
     border: none;
     padding: 0px 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        padding: 40px 0px 0px 0px;
+    }
+    .banner-left-leaf {
+        display: none;
+    }
+    .banner-right {
+        margin-top: 110px;
+    }
+    .leaf {
+        right: 0px;
+    }
+    .food-plate {
+        left: -10px;
+    }
+    .delivered-info {
+        left: 220px;
+        top: -50px;
+    }
+}
+
+
+
+@keyframes myAnim {
+    0% {
+        transform: translateX(-100px);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
 }
