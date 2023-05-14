@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 /* Header */
 .header {
     background: #F0F4EC;
@@ -19,6 +20,12 @@
 
 .navbar-light .navbar-nav .nav-link {
     color: rgb(24 24 23) !important;
+    transition: .3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #396C03;
+    transform: scale(1.1);
 }
 
 .brand-logo {
@@ -50,6 +57,11 @@
 
 .cart {
     position: relative;
+    transition: .3s;
+}
+
+.cart:hover {
+    transform: scale(1.025);
 }
 
 .cart-count {
@@ -76,6 +88,7 @@
 }
 
 .login-btn {
+    transition: .3s;
     padding: 12px 50px;
     border-radius: 30px;
     margin-right: 10px;
@@ -89,12 +102,18 @@
     line-height: 170%;
 }
 
+.login-btn:hover {
+    transform: scale(1.025);
+    background: #ff8b00;
+}
+
 
 /* Header */
 /* Banner */
 .banner {
     background: #F0F4EC;
     padding: 180px 0px 60px 0px;
+    overflow-x: hidden;
 }
 
 .banner-left h2 {
@@ -253,9 +272,10 @@ form.search-bar input::placeholder {
 }
 
 /* Banner */
-
+/* About */
 .about {
     padding: 60px 0px;
+    overflow-x: hidden;
 }
 
 .about-right {
@@ -269,7 +289,7 @@ form.search-bar input::placeholder {
 .cycle {
     position: absolute;
     top: 0;
-    animation: myAnim 1s ease-out 0s infinite alternate both;
+    animation: slideToRight 1s ease-out 0s infinite alternate both;
 }
 
 .about-left h2 {
@@ -300,31 +320,116 @@ form.search-bar input::placeholder {
     padding: 0px 50px;
 }
 
+/* About */
+
+/* Responsive */
 @media screen and (max-width: 768px) {
     .banner {
         padding: 40px 0px 0px 0px;
     }
+
     .banner-left-leaf {
         display: none;
     }
+
     .banner-right {
         margin-top: 110px;
     }
+
     .leaf {
         right: 0px;
     }
+
     .food-plate {
         left: -10px;
     }
+
     .delivered-info {
         left: 220px;
         top: -50px;
     }
 }
 
+@media screen and (max-width: 1024px) {
 
+    .delivered-info {
+        left: 70px;
+        top: -65px;
+    }
+}
 
-@keyframes myAnim {
+@media screen and (max-width: 991px) {
+    .cart {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .delivered-info {
+        left: 65px;
+        top: -65px;
+    }
+
+    .banner-left h2 {
+        font-size: 40px;
+
+    }
+
+    .banner-left p {
+
+        font-size: 18px;
+        line-height: 180%;
+
+    }
+
+    .search-bar button {
+
+        padding: 0px 30px;
+    }
+
+    form.search-bar input::placeholder {
+        font-size: 16px;
+        line-height: 170%;
+
+    }
+
+    .about {
+        padding: 40px 0px;
+    }
+
+    .about-left h2 {
+        font-size: 40px;
+
+    }
+
+    .about-left p {
+        font-size: 16px;
+    }
+
+    .about-left button {
+        padding: 0px 30px;
+    }
+
+    .cart {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .delivered-info {
+        left: 30px;
+        top: -70px;
+    }
+
+    .delivered-info h4 {
+        font-size: 28px;
+
+    }
+}
+
+/* Responsive */
+/* Animation */
+@keyframes slideToRight {
     0% {
         transform: translateX(-100px);
     }
@@ -333,3 +438,5 @@ form.search-bar input::placeholder {
         transform: translateX(200px);
     }
 }
+
+/* Animation */
